@@ -1,0 +1,437 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/*
+*  Style for Noabox.
+*  Author:WayJam So
+*/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #1b98f8;
+}
+.clearfix {
+  clear: both;
+}
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
+
+.hidden{
+  display: none;
+}
+
+
+/*
+ * -- NAV BAR STYLES --
+ * Styling the default .pure-menu to look a little more unique.
+ */
+
+#nav .logo button {
+  color: #FFF;
+  background: #1B98F8 none repeat scroll 0% 0%;
+  border-radius: 1em;
+  border: 0px none;
+  padding: .6em;
+  text-shadow: 0px 0px 2px #000;
+  box-shadow: 0px 0px 6px #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+#nav .menu {
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+#nav .menu-item:hover, #nav .menu-item:focus {
+  background: rgb(55, 60, 90);
+}
+#nav .menu-link {
+  color: #fff;
+}
+#nav .menu-heading {
+  border-bottom: none;
+  font-size: 110%;
+  color: rgb(75, 113, 151);
+}
+#nav .menu-list {
+  list-style: none;
+  padding: 1em 0;
+}
+#nav .menu-item {
+  padding: 0.8em 1em;
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#nav a {
+  color: #fff;
+}
+#nav .menu-item a {
+  display: block;
+}
+#nav .menu-item-circle {
+  font-size: 1.3em;
+  margin-right: .5em;
+}
+.bgcolor-blue {
+  background-color: #2196F3;
+}
+.bgcolor-amber {
+  background-color: #FFC107;
+}
+.bgcolor-green {
+  background-color: #4CAF50;
+}
+.bgcolor-teal {
+  background-color: #009688;
+}
+.fontcolor-blue {
+  color: #2196F3;
+}
+.fontcolor-amber {
+  color: #FFC107;
+}
+.fontcolor-green {
+  color: #4CAF50;
+}
+.fontcolor-teal {
+  color: #009688;
+}
+.fontcolor-pink {
+  color: #FF4081;
+}
+#status .nowplaying {
+  font-weight: 600;
+  font-size: 1.5em;
+  text-shadow: 0px 0px 1px rgb(0, 0, 0);
+}
+
+#status .time{
+  color: #ddd;
+}
+#status .progressbar {
+  position: relative;
+  height: 4px;
+  display: block;
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 2px;
+  margin: 0.5rem 0px 1rem;
+  overflow: hidden;
+}
+#status .progressbar .determinate {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-color: #3BAB83;
+  transition: width 0.3s linear 0s;
+}
+#main {
+
+}
+#header, #control-panel {
+  position: fixed;
+  z-index: 1000;
+  right: 0px;
+  left: 500px;
+  overflow: hidden;
+  color: #f7f7f7;
+}
+.header-inner {
+  padding: 1em 2em;
+}
+.control-panel-inner {
+  padding: .6em 3em;
+}
+#header {
+  background-color: #3F474D;
+  border-bottom: 1px solid #B5B5B5;
+  top: 0px;
+}
+#control-panel {
+  background-color: #3F474D;
+  border-top: 1px solid #B5B5B5;
+  bottom: 0;
+}
+.control-panel-inner > div > * {
+  margin: 0 .5em;
+}
+
+/*control panel button */
+.control-group-left button{
+    border-radius: 50%;
+    background: #333;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.16), 0px 2px 10px 1px rgba(0, 0, 0, 0.12);
+}
+
+.control-group-right button{
+  border-radius: 10%;
+  background: transparent;
+
+}
+#control-panel button {
+  text-align: center;
+  color: #fff;
+
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -moz-user-select: none;
+  vertical-align: middle;
+  z-index: 1;
+  will-change: opacity, transform;
+  transition: all 0.3s ease-out 0s;
+  border: 0;
+  font-size: 1.2em;
+  padding: 1em;
+}
+#control-panel button:hover,#control-panel select:hover {
+  box-shadow: 0 0 1px #fff;
+  background: #444;
+}
+#control-panel .control-group-play {}
+#control-panel .control-group-prev {}
+#control-panel .control-group-next {}
+#control-panel .control-group-vol {
+  height: .2em;
+}
+#layout, #nav {
+  transition: all 0.2s ease-out 0s;
+}
+#list {
+  width: 350px;
+  background: #f3f3f3;
+  border-right: 1px solid rgb(204, 204, 204);
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+#list ul,#list li{
+  list-style: none;
+}
+
+#list .playlist{
+  padding: 0;
+  margin: 0;
+}
+#list  .playlist-item{
+  padding: 1em 1.5em;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  border-left: 6px solid #1B98F8;
+  color: #00796B;
+  clear: both;
+  cursor: pointer;
+}
+
+#list  li.playlist-item:hover{
+  background:#26A69A;
+  color: #eee;
+}
+#list  .playlist-item:hover:after{
+  content: "\bb";
+  margin-left: .5em;
+  float: right;
+}
+
+#list  .playlist-item:hover:before{
+  color:#fff;
+}
+#list  .playlist-item:before{
+  content: "\1f3b5";
+  margin-right: .5em;
+  margin-left: -0.5em;
+  color: #666;
+}
+
+.stream-switch{
+  display: inline;
+}
+.stream-switch label{
+  cursor: pointer;
+  font-size: .8em;
+  color: #ddd;
+}
+.stream-switch  label input[type="checkbox"] {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+    visibility: hidden;
+}
+
+.stream-switch label input[type="checkbox"]:checked + .lever {
+    background-color: #84C7C1;
+}
+
+.stream-switch label .lever {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 15px;
+    background-color: #818181;
+    border-radius: 15px;
+    transition: background 0.3s ease 0s;
+    vertical-align: middle;
+    margin: 0px 10px;
+}
+
+.stream-switch label input[type="checkbox"]:checked + .lever::after {
+    left: 24px;
+}
+.stream-switch label input[type="checkbox"]:checked + .lever::after {
+    background-color: #26A69A;
+}
+.stream-switch label .lever::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-color: #F1F1F1;
+    border-radius: 21px;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.4);
+    left: -5px;
+    top: -3px;
+    transition: left 0.3s ease 0s, background 0.3s ease 0s, box-shadow 0.1s ease 0s;
+  }
+/**
+mode select
+*/
+.play-mode-switch{
+  display: inline-block;
+position: relative;
+}
+
+select.play-mode-select{
+  animation-duration: 0.0001s;
+  animation-name: mui-node-inserted;
+  display: block;
+  width: 100%;
+  -moz-appearance: none;
+  outline: medium none;
+  text-decoration: none;
+  background-color: #444;
+  text-align: center;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease-out 0s;
+  box-shadow: 0px 0px 3px 0px #eee;
+  cursor: pointer;
+  color: #F7F7F7;
+  padding: .5em 1em;
+  border-radius: 3px;
+  border: 0px none;
+}
+select.play-mode-select option{
+
+}
+/* Make the navigation 100% width on phones */
+
+#nav {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  background: rgb(37, 42, 58);
+  text-align: center;
+}
+
+/* Show the "Menu" button on phones */
+
+#nav .nav-menu-button {
+  display: block;
+  top: 0.5em;
+  right: 0.5em;
+  position: absolute;
+}
+
+/* When "Menu" is clicked, the navbar should be 80% height */
+
+#nav.active {
+  height: 80%;
+}
+
+/* Don't show the navigation items... */
+
+.nav-inner {
+  display: none;
+}
+
+/* ...until the "Menu" button is clicked */
+
+#nav.active .nav-inner {
+  display: block;
+  padding: 2em 0;
+}
+#layout {
+  position: relative;
+  padding-left: 0;
+}
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+
+@media (min-width: 40em) {
+  /* Move the layout over so we can fit the nav + list in on the left */
+  #layout {
+    padding-left: 150px;
+    left: 0;
+  }
+  /* These are position:fixed; elements that will be in the left 500px of the screen */
+  #nav {
+    width: 150px;
+    left: 150px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    overflow: auto;
+    z-index: 1000;
+    overflow-y: auto;
+    margin-left: -150px;
+  }
+  /* Show the menu items on the larger screen */
+  .nav-inner {
+    display: block;
+    padding: 1em 0;
+  }
+  /* Hide the "Menu" button on larger screens */
+  #nav .nav-menu-button {
+    display: none;
+  }
+  #main {}
+}
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+
+@media (min-width: 60em) {
+  /* This will take up the entire height, and be a little thinner */
+  /* This will now take up it's own column, so don't need position: fixed; */
+  #main {
+    position: static;
+    margin: 0;
+    padding: 0;
+  }
+}

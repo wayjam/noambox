@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>Noambox</title>
+    <!--<link rel="stylesheet" href="{{ static_url("css/style.css") }}">-->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="http://localhost:35729/livereload.js"></script>
+    <script src="../static/js/jquery.js"> </script>
+  </head>
+  <body>
+  <div id="layout">
+    <div id="nav">
+      <a href="#" class="nav-menu-button">Menu</a>
+      <div class="nav-inner">
+        <div class="logo"><button>Noambox</button></div>
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-blue">&#x1f518;</span>Play</a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-green">&#x1f4fb;</span>Fm</a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-green">&#128269;</span>Search</a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-amber">&#x1f0a0;</span>Device</a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-pink">&#x26bf;</span>Setting</a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-teal">&#x1f66a;</span>About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="header">
+        <div class="header-inner">
+          <div id="status">
+            <div class="nowplaying">
+              <span class="title">Carrie</span> &ndash;
+              <span class="singer">Europe</span>
+              <div class="time fright">
+                <span class="current-time">4:30</span>
+                /
+                <span class="total-time">5:55</span>
+              </div>
+            </div>
+            <div class="progressbar">
+                <span class="determinate" style="width: 50%"></span>
+            </div>
+            <span class="loading"></span>
+            <span class="minilryic">This is the lyric demo.</span>
+                    this is the list
+          </div>
+        </div>
+      </div>
+      <div id="list">
+        <div class="list-inner">
+          <ul class="playlist">
+            <li class="playlist-item">Playlist</li>
+            <li class="playlist-item">WayJam喜欢的音乐</li>
+            <li class="playlist-item">林志炫</li>
+            <li class="playlist-item">我是歌手</li>
+            <li class="playlist-item">粤语歌单</li>
+            <li class="playlist-item"></li>
+            <li class="playlist-item"></li>
+
+          </ul>
+
+        </div>
+      </div>
+      <div id="content">
+        this is the content
+        number &numero;
+        refresh &#128472;
+      </div>
+      <div id="control-panel">
+        <div class="control-panel-inner">
+          <div class="fleft control-group-left">
+            <button class="control-group-prev" type="button" name="control-group-prev">&#9198;</button>
+            <button class="control-group-play" type="button" name="control-group-prev">&#9654;</button>
+            <button class="control-group-play" type="button" name="control-group-prev">&#9208;</button>
+            <button class="control-group-next" type="button" name="control-group-next">&#9197;</button>
+            <div class="stream-switch">
+                <label>
+                  Stream
+                  <input type="checkbox">
+                  <span class="lever"></span>
+                </label>
+              </div>
+            <input class="control-group-vol" min="0.0" max="1.0" step="0.001" tabindex="-1" type="range" name="control-group-vol">
+          </div>
+          <div class="fright control-group-right">
+            <div class="play-mode-switch">
+              <select class="play-mode-select">
+                <option value="0">Default</option>
+                <option value="1">Loop Track</option>
+                <option value="2">Loop Playlist</option>
+                <option value="3">Randomize</option>
+              </select>
+            </div>
+            <button class="control-group-list" type="button" name="control-group-list">&equiv;</button>
+          </div>
+          <div class="clearfix"></div>
+        <div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
