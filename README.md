@@ -1,7 +1,7 @@
 # Noambox
 Noambox is designed to play music on single-board computers(like Raspberry Pi).This program is written in Python.It runs a httpserver(by using tornado) and offers a webui controller.
 ### Plan
-* Support Doouban.Fm
+* Support Douban.Fm
 * Support NetEaseMusic
 * Support Sporify
 * Support SoundCloud
