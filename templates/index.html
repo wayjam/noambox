@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../static/css/style.css">
     <script src="http://localhost:35729/livereload.js"></script>
     <script src="../static/js/jquery.js"> </script>
+    <script src="../static/js/js.js"> </script>
   </head>
   <body>
   <div id="layout">
@@ -16,12 +17,12 @@
         <div class="logo"><button>Noambox</button></div>
         <div class="menu">
           <ul class="menu-list">
-            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-blue">&#x1f518;</span>Play</a></li>
-            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-green">&#x1f4fb;</span>Fm</a></li>
-            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-green">&#128269;</span>Search</a></li>
-            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-amber">&#x1f0a0;</span>Device</a></li>
-            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-pink">&#x26bf;</span>Setting</a></li>
-            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-teal">&#x1f66a;</span>About</a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-blue" style="color:#2196F3;">&#x1f518;</span>Play</a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-green" style="color:#4CAF50;">&#x1f4fb;</span>Fm</a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-green" style="color:#FF5252;">&#128269;</span>Search</a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-amber" style="color:#FFC107">&#x1f0a0;</span>Device</a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-pink" style="color:#FF4081;">&#x26bf;</span>Setting</a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-item-circle fontcolor-teal" style="color:#009688;">&#x1f66a;</span>About</a></li>
           </ul>
         </div>
       </div>
@@ -93,7 +94,7 @@
                 <option value="3">Randomize</option>
               </select>
             </div>
-            <button class="control-group-list" type="button" name="control-group-list">&equiv;</button>
+            <button class="control-group-toggle-menu" type="button" name="control-group-toggle-menu" onclick="menu_toggle();" >&equiv;</button>
           </div>
           <div class="clearfix"></div>
         <div>
