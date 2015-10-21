@@ -327,11 +327,11 @@ select.play-mode-select option {}
 #list ul, #list li {
   list-style: none;
 }
-#list .playlist {
+#list .thelist {
   padding: 0;
   margin: 0;
 }
-#list .playlist-item {
+#list .thelist-item {
   padding: 1em 1.5em;
   background: #fff;
   border-bottom: 1px solid #ddd;
@@ -341,19 +341,19 @@ select.play-mode-select option {}
   clear: both;
   cursor: pointer;
 }
-#list li.playlist-item:hover {
+#list li.thelist-item:hover {
   background: #26A69A;
   color: #eee;
 }
-#list .playlist-item:hover:after {
+#list .thelist-item:hover:after {
   content: "\bb";
   margin-left: .5em;
   float: right;
 }
-#list .playlist-item:hover:before {
+#list .thelist-item:hover:before {
   color: #fff;
 }
-#list .playlist-item:before {
+#list .thelist-item:before {
   content: "\1f3b5";
   margin-right: .5em;
   margin-left: -0.5em;
