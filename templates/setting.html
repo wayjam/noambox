@@ -1,0 +1,60 @@
+{% extends "main.html" %}
+
+
+
+{% block list %}
+<li class="thelist-item"><a href='#basic'>Basic</a></li>
+<li class="thelist-item"><a href='#doubanfm'>Douban.FM</a></li>
+<li class="thelist-item"><a href='#lastfm'>Last.FM</a></li>
+<li class="thelist-item"><a href='#netease'>Netease</a></li>
+{% end %}
+
+{% block header %}
+<div class="header-title">
+    <h2>Setting</h2>
+</div>
+{% end %}
+
+{% block searchbar %}
+<!--There is no searchbar inside this page.-->
+{% end %}
+
+{% block content %}
+<div id="setting-warpper">
+    <form action="/setting" method="post">
+        <fieldset id="basic">
+            <legend>Basic</legend>
+            {% module Setbox('use_netease_source','Enable Douban.Fm to use Netease Cloud Music source.','checkbox',config_set.use_netease_source) %}
+            {% module Setbox('scroll_lryic','Scroll your Lryic automatically.','checkbox',config_set.scroll_lryic) %}
+            {% module Setbox('enable_rpc','Enable the RPC Mode','checkbox',config_set.enable_rpc) %}
+            <input type="submit" name='save_config' value="Save">
+        </fieldset>
+    </form>
+    <form action="javascript:void(0);" method="post">
+        <fieldset id="doubanfm">
+            <legend>Douban.FM</legend>
+            {% if douban_account.logined %}
+                <p><span>{{ douban_account.username }}</span> has logined.</p>
+                <button name="douban_logout">Logout</button>
+            {% else %}
+                <p>You have not logined in.</p>
+                {% module Setbox('douban_email','Email','email') %}
+                {% module Setbox('douban_passwd','Password','password') %}
+                {% module Setbox('douban_captcha','Captcha','text') %}
+                <p><img src="" alt="captcha" id="captcha"></p>
+                <button name="douban_login" id="douban_login">Login</button>
+            {% end %}
+        </fieldset>
+        <fieldset id="lastfm">
+            <legend>Last.FM</legend>
+        </fieldset>
+        <fieldset id="netease">
+            <legend>Netease Cloud Music</legend>
+        </fieldset>
+    </form>
+</div>
+{% end %}
+
+{% block control-panel %}
+<!--There is no control-panel inside this page.-->
+{% end %}

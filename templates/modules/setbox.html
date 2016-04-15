@@ -1,0 +1,11 @@
+{% if type == 'checkbox' %}
+<div class="checkbox">
+    <input type={{ type }} id={{ name }} name={{ name }} {% if value %} checked='checked'{% end %}>
+    <label for={{ name }}>{{ text }}</label>
+</div>
+{% else %}
+<div class="input">
+    <input type={{ type }} id={{ name }} name={{ name }} value={{ value }}>
+    <label for={{ name }} >{{ text }}</label>
+</div>
+{% end %}

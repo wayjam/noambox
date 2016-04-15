@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+
+{% block list %}
+  {% for list in lists %}
+    <li class="thelist-item">{{ list }}</li>
+  {% end %}
+{% end %}
+
+{% block header %}
+{% end %}
+
+{% block content %}
+<div class="songlist-warpper">
+  <ul class="songlist">
+    {% for song in songs %}
+    <li class="song-item">
+      <span class="title">{{ song.title }}</span>
+      <span class="duration">{{ song.duration }}</span>
+      <span class="singer">{{ song.singer }}</span>
+      <span class="album">{{ song.album }}</span>
+      <div class="button">
+        <button type="button" name="play-this">&#9656;</button>
+        <button type="button" name="plus-this">&plus;</button>
+      </div>
+    </li>
+    {% end %}
+  </ul>
+</div>
+{% end %}

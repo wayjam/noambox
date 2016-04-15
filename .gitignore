@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*.pyc
 
 # C extensions
 *.so
@@ -55,3 +56,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#Dev Test
+test/
+data/
+*.sublime-workspace
+handler/player.py
